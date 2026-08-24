@@ -174,10 +174,8 @@ export default function DashboardPage() {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-base sm:text-lg font-bold text-white tracking-tight">Flood Guard Pro</h1>
-              <p className="text-[11px] text-zinc-400">
-                Dam reservoir monitoring & alert system
-              </p>
+              <h1 className="text-base sm:text-lg font-bold text-white tracking-tight">FLOOD GUARD</h1>
+              <p className="text-xs sm:text-sm text-slate-400 font-medium">Monitoring System</p>
             </div>
           </div>
 

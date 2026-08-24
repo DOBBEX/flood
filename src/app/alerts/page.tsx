@@ -55,7 +55,7 @@ export default function AlertsPage() {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+    visible: { opacity: 1, y: 0, transition: { type: "tween", duration: 0.4, ease: "easeOut" } }
   };
 
   const handleManualDispatch = async (e: React.FormEvent) => {

@@ -12,9 +12,6 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "FLOOD GUARD",
   description: "Real-time flood detection and automated SMS alert system for dam reservoir monitoring.",
-  icons: {
-    icon: "/favicon.ico",
-  },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

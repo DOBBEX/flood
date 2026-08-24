@@ -111,12 +111,12 @@ export default function SettingsPage() {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 400, damping: 20 } }
+    visible: { opacity: 1, y: 0, scale: 1, transition: { type: "tween", duration: 0.4, ease: "easeOut" } }
   };
 
   const floatVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 400, damping: 20 } }
+    animate: { opacity: 1, y: 0, transition: { type: "tween", duration: 0.4, ease: "easeOut" } }
   };
 
   return (
@@ -182,7 +182,7 @@ export default function SettingsPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
                 className="space-y-6"
               >
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -286,7 +286,7 @@ export default function SettingsPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
                 className="space-y-6"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -322,7 +322,7 @@ export default function SettingsPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
                 className="app-card !p-6 space-y-6 min-h-[400px] border-t-4 border-t-sky-500"
               >
                 <div className="flex items-center justify-between border-b border-white/5 pb-3">

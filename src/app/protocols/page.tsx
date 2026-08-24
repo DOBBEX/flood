@@ -16,12 +16,12 @@ export function ProtocolsPage() {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 400, damping: 20 } }
+    visible: { opacity: 1, y: 0, scale: 1, transition: { type: "tween", duration: 0.4, ease: "easeOut" } }
   };
 
   const floatVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 400, damping: 20 } }
+    animate: { opacity: 1, y: 0, transition: { type: "tween", duration: 0.4, ease: "easeOut" } }
   };
 
   return (
@@ -91,7 +91,7 @@ export function ProtocolsPage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
               className="space-y-4"
             >
               {[
@@ -168,7 +168,7 @@ export function ProtocolsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
               className="space-y-4"
             >
               <div className="app-card !p-5 space-y-4 shadow-xl">
@@ -228,7 +228,7 @@ export function ProtocolsPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
               className="space-y-4"
             >
               <div className="app-card !p-5 space-y-4 shadow-xl">

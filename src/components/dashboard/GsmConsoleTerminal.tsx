@@ -100,7 +100,7 @@ export function GsmConsoleTerminal() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
                   className="leading-relaxed flex items-start space-x-2"
                 >
                   <span className="text-zinc-600 text-[10px] shrink-0">[{log.time}]</span>

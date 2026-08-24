@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+/.pnpm
+/.yarn
+
+# Next.js build outputs
+/.next/
+/out/
+
+# Production build outputs
+/build
+/dist
+
+# SQLite & local database files
+*.db
+*.db-journal
+
+# Environment variables
+.env
+.env*.local
+
+# System files
+.DS_Store
+*.pem

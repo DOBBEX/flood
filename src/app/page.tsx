@@ -53,7 +53,7 @@ export default function DashboardPage() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.08,
         delayChildren: 0.1
       }
     }
@@ -61,7 +61,7 @@ export default function DashboardPage() {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95, y: 15 },
-    visible: { opacity: 1, scale: 1, y: 0, transition: { type: "tween", duration: 0.4, ease: "easeOut" } }
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
   };
 
   const isRaining = sensors.rainAo <= config.rainAoThresh || sensors.rainDo === true;
@@ -207,13 +207,13 @@ export default function DashboardPage() {
 
         {/* 3 Metric Cards */}
         <motion.div variants={itemVariants} className="grid grid-cols-3 gap-2.5 sm:gap-4">
-          <motion.div whileHover={{ y: -5 }} transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}>
+          <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
             <DistanceGauge distanceCm={sensors.distance} />
           </motion.div>
-          <motion.div whileHover={{ y: -5 }} transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}>
+          <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
             <WaterLevelGauge waterValue={sensors.waterValue} />
           </motion.div>
-          <motion.div whileHover={{ y: -5 }} transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}>
+          <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
             <RainStatusWidget isRaining={isRaining} dryCountdown={dryCountdown} />
           </motion.div>
         </motion.div>
